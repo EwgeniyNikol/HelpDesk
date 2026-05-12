@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.add-ticket-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.add-ticket-btn:hover {
+  background-color: #45a049;
+}
+
+.tickets-list {
+  width: 100%;
+  max-width: 800px;
+}
+
+.ticket-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.ticket-status {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.ticket-name {
+  flex-grow: 1;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ticket-date {
+  margin-right: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.ticket-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.ticket-actions button:hover {
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.ticket-description {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.modal-content textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.modal-buttons {
+  text-align: right;
+}
+
+.modal-buttons button {
+  padding: 8px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-save {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.modal-cancel {
+  background-color: #ccc;
+}
