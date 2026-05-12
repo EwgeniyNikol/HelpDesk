@@ -28,7 +28,13 @@ export default class UI {
 
       const date = document.createElement('span');
       date.classList.add('ticket-date');
-      date.textContent = new Date(ticket.created).toLocaleString();
+      const d = new Date(ticket.created);
+      const day = String(d.getDate()).padStart(2, '0');
+      const month = String(d.getMonth() + 1).padStart(2, '0');
+      const year = String(d.getFullYear()).slice(-2);
+      const hours = String(d.getHours()).padStart(2, '0');
+      const minutes = String(d.getMinutes()).padStart(2, '0');
+      date.textContent = `${day}.${month}.${year} ${hours}:${minutes}`;
 
       const actions = document.createElement('span');
       actions.classList.add('ticket-actions');
@@ -74,8 +80,8 @@ export default class UI {
         <label>Подробное описание</label>
         <textarea class="modal-description">${description}</textarea>
         <div class="modal-buttons">
-          <button class="modal-save">Сохранить</button>
           <button class="modal-cancel">Отмена</button>
+          <button class="modal-save">Сохранить</button>
         </div>
       </div>
     `;
@@ -101,10 +107,10 @@ export default class UI {
     modal.innerHTML = `
       <div class="modal-content">
         <h3>Удалить тикет</h3>
-        <p>Вы уверены, что хотите удалить этот тикет?</p>
+        <p>Вы уверены, что хотите удалить этот тикет? Это действие необратимо.</p>
         <div class="modal-buttons">
-          <button class="modal-save">ОК</button>
           <button class="modal-cancel">Отмена</button>
+          <button class="modal-save">ОК</button>
         </div>
       </div>
     `;

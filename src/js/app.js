@@ -59,12 +59,12 @@ export default class App {
 
   openTicket(id) {
     api.getTicketById(id).then(ticket => {
-      const descBlock = document.querySelector(`[data-id="${id}"] .ticket-description`);
+      const item = document.querySelector(`[data-id="${id}"]`);
+      const descBlock = item.nextElementSibling?.classList.contains('ticket-description') ? item.nextElementSibling : null;
       if (descBlock) {
         descBlock.remove();
         return;
       }
-      const item = document.querySelector(`[data-id="${id}"]`);
       const desc = document.createElement('div');
       desc.classList.add('ticket-description');
       desc.textContent = ticket.description || 'Нет описания';
