@@ -5,6 +5,11 @@ body {
   background-color: #f5f5f5;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .add-ticket-btn {
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -22,64 +27,67 @@ body {
 
 .tickets-list {
   width: 100%;
-  max-width: 800px;
 }
 
 .ticket-item {
   display: flex;
   align-items: center;
-  padding: 15px;
+  padding: 10px 15px;
   background: white;
   border: 1px solid #ddd;
-  margin-bottom: 5px;
-  border-radius: 5px;
+  margin-bottom: -1px;
 }
 
 .ticket-status {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #999;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #999;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   margin-right: 15px;
-  font-size: 18px;
+  font-size: 14px;
+  flex-shrink: 0;
 }
 
 .ticket-name {
   flex-grow: 1;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .ticket-date {
   margin-right: 15px;
   color: #666;
-  font-size: 14px;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 .ticket-actions button {
-  border: none;
-  background: none;
+  border: 1px solid #ccc;
+  background: #fff;
   cursor: pointer;
-  font-size: 18px;
-  padding: 5px 10px;
+  font-size: 14px;
+  padding: 2px 8px;
+  border-radius: 50%;
+  margin-left: 5px;
+  width: 28px;
+  height: 28px;
 }
 
 .ticket-actions button:hover {
-  background-color: #eee;
-  border-radius: 50%;
+  background-color: #e0e0e0;
 }
 
 .ticket-description {
   padding: 10px 15px;
-  margin-bottom: 5px;
+  margin-bottom: -1px;
   background: #fff;
   border: 1px solid #ddd;
   border-top: none;
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
 }
 
@@ -93,23 +101,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 .modal-content {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  width: 400px;
+  padding: 25px 30px;
+  border-radius: 6px;
+  width: 420px;
+  border: 1px solid #ccc;
 }
 
 .modal-content h3 {
   margin-top: 0;
+  font-size: 16px;
+  text-align: center;
 }
 
 .modal-content label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-size: 13px;
 }
 
 .modal-content input,
@@ -117,13 +129,15 @@ body {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
 }
 
 .modal-content textarea {
-  height: 100px;
+  height: 80px;
   resize: vertical;
 }
 
@@ -134,16 +148,19 @@ body {
 .modal-buttons button {
   padding: 8px 20px;
   margin-left: 10px;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 13px;
 }
 
 .modal-save {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #fff;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
 }
 
 .modal-cancel {
-  background-color: #ccc;
+  background-color: #fff;
+  color: #333;
 }
