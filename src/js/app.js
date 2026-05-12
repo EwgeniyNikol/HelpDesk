@@ -51,7 +51,7 @@ export default class App {
 
   toggleStatus(id) {
     api.getTicketById(id).then(ticket => {
-      api.updateTicket(id, { ...ticket, status: !ticket.status }).then(() => {
+      api.updateTicket(id, { status: !ticket.status }).then(() => {
         this.loadTickets();
       });
     });
